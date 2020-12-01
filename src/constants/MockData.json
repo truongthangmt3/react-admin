@@ -35,7 +35,7 @@
     },
     {
       "name": "Xe mới",
-      "icon": "fas fa-truck-moving",
+      "icon": "fas fa-truck",
       "path": "/vehicle",
       "children": [
         {
