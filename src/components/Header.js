@@ -1,30 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Header extends Component {
   render() {
+    // return <h1>Header</h1>;
     return (
       <div>
         <nav className="main-header navbar navbar-expand navbar-white navbar-light">
           {/* Left navbar links */}
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" data-widget="pushmenu" href="#" role="button">
+              <a
+                className="nav-link"
+                data-widget="pushmenu"
+                href="#"
+                role="button"
+              >
                 <i className="fas fa-bars" />
               </a>
             </li>
             <li className="nav-item d-none d-sm-inline-block">
-              <a href="index3.html" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li className="nav-item d-none d-sm-inline-block">
-              <a href="#" className="nav-link">
-                Contact
-              </a>
+              <a className="nav-link">Home</a>
             </li>
           </ul>
           {/* SEARCH FORM */}
-          <form className="form-inline ml-3">
+          {/* <form className="form-inline ml-3">
             <div className="input-group input-group-sm">
               <input
                 className="form-control form-control-navbar"
@@ -38,7 +37,7 @@ class Header extends Component {
                 </button>
               </div>
             </div>
-          </form>
+          </form> */}
           {/* Right navbar links */}
           <ul className="navbar-nav ml-auto">
             {/* Messages Dropdown Menu */}
@@ -51,7 +50,11 @@ class Header extends Component {
                 <a href="#" className="dropdown-item">
                   {/* Message Start */}
                   <div className="media">
-                    <img src="dist/img/user1-128x128.jpg" alt="User Avatar" className="img-size-50 mr-3 img-circle" />
+                    <img
+                      src="dist/img/user1-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 mr-3 img-circle"
+                    />
                     <div className="media-body">
                       <h3 className="dropdown-item-title">
                         Brad Diesel
@@ -71,7 +74,11 @@ class Header extends Component {
                 <a href="#" className="dropdown-item">
                   {/* Message Start */}
                   <div className="media">
-                    <img src="dist/img/user8-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+                    <img
+                      src="dist/img/user8-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 img-circle mr-3"
+                    />
                     <div className="media-body">
                       <h3 className="dropdown-item-title">
                         John Pierce
@@ -91,7 +98,11 @@ class Header extends Component {
                 <a href="#" className="dropdown-item">
                   {/* Message Start */}
                   <div className="media">
-                    <img src="dist/img/user3-128x128.jpg" alt="User Avatar" className="img-size-50 img-circle mr-3" />
+                    <img
+                      src="dist/img/user3-128x128.jpg"
+                      alt="User Avatar"
+                      className="img-size-50 img-circle mr-3"
+                    />
                     <div className="media-body">
                       <h3 className="dropdown-item-title">
                         Nora Silvester
@@ -120,7 +131,9 @@ class Header extends Component {
                 <span className="badge badge-warning navbar-badge">15</span>
               </a>
               <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span className="dropdown-item dropdown-header">15 Notifications</span>
+                <span className="dropdown-item dropdown-header">
+                  15 Notifications
+                </span>
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item">
                   <i className="fas fa-envelope mr-2" /> 4 new messages
@@ -129,7 +142,9 @@ class Header extends Component {
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item">
                   <i className="fas fa-users mr-2" /> 8 friend requests
-                  <span className="float-right text-muted text-sm">12 hours</span>
+                  <span className="float-right text-muted text-sm">
+                    12 hours
+                  </span>
                 </a>
                 <div className="dropdown-divider" />
                 <a href="#" className="dropdown-item">
@@ -141,16 +156,6 @@ class Header extends Component {
                   See All Notifications
                 </a>
               </div>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" data-widget="fullscreen" href="#" role="button">
-                <i className="fas fa-expand-arrows-alt" />
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                <i className="fas fa-th-large" />
-              </a>
             </li>
           </ul>
         </nav>
