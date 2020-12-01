@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { DashboardScreen, LoginScreen } from '../screens/index';
+import { DashboardScreen, LoginScreen, Dashboard2Screen , BaseScreen} from '../screens/index';
 import Menu from '../components/Menu';
 import Header from '@components/Header';
 import { ROUTER } from '../constants/Constant';
@@ -11,7 +11,7 @@ class AppNavigator extends Component {
     return (
       <Router>
         <Switch>
-          {/* <Route path={ROUTER.LOGIN} exact component={LoginScreen} /> */}
+          <Route path={"/login"} exact component={LoginScreen} />
           <PrivateRoute path='/' Component={MainNavigator} />
         </Switch>
       </Router>
@@ -25,9 +25,13 @@ class MainNavigator extends Component {
       <>
         <Header />
         <Menu />
-        <Route path='/overview' exact component={DashboardScreen} />
+        {/* <Route path='/overview' exact component={DashboardScreen} /> */}
+        <Switch>
+        <Route path='/overview' exact component={Dashboard2Screen} />
         <Route path='/login' exact component={LoginScreen} />
-        <Route render={() => <Redirect to={ROUTER.OVERVIEW} />} />
+        <Route path='/base-screen' exact component={BaseScreen} />
+        <Route render={() => <Redirect to={"base-screen"} />} />
+        </Switch>
       </>
     );
   }
