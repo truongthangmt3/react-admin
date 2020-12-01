@@ -1,0 +1,128 @@
+{
+  "menus": [
+    {
+      "name": "Tổng quan",
+      "icon": "fas fa-chart-pie",
+      "children": null,
+      "path": "/overview",
+      "badge": null
+    },
+    {
+      "name": "Khách hàng",
+      "icon": "fas fa-users",
+      "children": null,
+      "path": "/customer",
+      "badge": "+8"
+    },
+    {
+      "name": "Phụ tùng",
+      "icon": "fas fa-truck-monster",
+      "children": [
+        {
+          "name": "Danh sách",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/new"
+        },
+        {
+          "name": "Loại phụ tùng",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/customer"
+        }
+      ],
+      "path": "/customer"
+    },
+    {
+      "name": "Xe mới",
+      "icon": "fas fa-truck-moving",
+      "path": "/vehicle",
+      "children": [
+        {
+          "name": "Danh sách",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/new"
+        },
+        {
+          "name": "Loại xe",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/customer"
+        }
+      ]
+    },
+    {
+      "name": "Vận chuyển",
+      "icon": "fas fa-shipping-fast",
+      "path": "/vehicle",
+      "children": [
+        {
+          "name": "Danh sách",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/new"
+        },
+        {
+          "name": "Loại xe",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/customer"
+        }
+      ]
+    },
+    {
+      "name": "UConnect",
+      "icon": "fas fa-link",
+      "path": "/vehicle",
+      "children": [
+        {
+          "name": "Danh sách",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/new"
+        },
+        {
+          "name": "Loại xe",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/customer"
+        }
+      ]
+    },
+
+    {
+      "name": "Chợ xe",
+      "icon": "fas fa-store",
+      "path": "/vehicle",
+      "children": [
+        {
+          "name": "Danh sách",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/new"
+        },
+        {
+          "name": "Loại xe",
+          "icon": "far fa-circle",
+          "children": null,
+          "path": "/customer"
+        }
+      ]
+    },
+    {
+      "name": "Cấu hình",
+      "icon": "fas fa-cogs",
+      "children": null,
+      "path": "/config",
+      "badge": null
+    },
+    {
+      "name": "Tài khoản",
+      "icon": "fas fa-user-cog",
+      "children": null,
+      "path": "/account",
+      "badge": null
+    }
+  ]
+}
