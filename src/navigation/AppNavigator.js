@@ -1,10 +1,23 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { DashboardScreen, LoginScreen, Dashboard2Screen , BaseScreen} from '../screens/index';
-import Menu from '../components/Menu';
-import Header from '@components/Header';
-import { ROUTER } from '../constants/Constant';
-import PrivateRoute from './PrivateRoute';
+import React, { Component } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import {
+  DashboardScreen,
+  LoginScreen,
+  Dashboard2Screen,
+  BaseScreen,
+  CustomerListScreen,
+  CustomerDetailScreen,
+} from "../screens/index";
+
+import Menu from "../components/Menu";
+import Header from "@components/Header";
+import { ROUTER } from "../constants/Constant";
+import PrivateRoute from "./PrivateRoute";
 
 class AppNavigator extends Component {
   render() {
@@ -12,7 +25,7 @@ class AppNavigator extends Component {
       <Router>
         <Switch>
           <Route path={"/login"} exact component={LoginScreen} />
-          <PrivateRoute path='/' Component={MainNavigator} />
+          <PrivateRoute path="/" Component={MainNavigator} />
         </Switch>
       </Router>
     );
@@ -27,10 +40,16 @@ class MainNavigator extends Component {
         <Menu />
         {/* <Route path='/overview' exact component={DashboardScreen} /> */}
         <Switch>
-        <Route path='/overview' exact component={Dashboard2Screen} />
-        <Route path='/login' exact component={LoginScreen} />
-        <Route path='/base-screen' exact component={BaseScreen} />
-        <Route render={() => <Redirect to={"base-screen"} />} />
+          <Route path="/overview" exact component={DashboardScreen} />
+          <Route path="/login" exact component={LoginScreen} />
+          <Route path="/base" exact component={BaseScreen} />
+          <Route path="/customer" exact component={CustomerListScreen} />
+          <Route
+            path="/customer-detail"
+            exact
+            component={CustomerDetailScreen}
+          />
+          <Route render={() => <Redirect to={"base-screen"} />} />
         </Switch>
       </>
     );

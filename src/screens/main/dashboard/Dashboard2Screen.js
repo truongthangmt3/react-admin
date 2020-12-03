@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ScreenComponent from "@components/ScreenComponent";
+import ScreenWrapper from "@components/ScreenWrapper";
 
 export default class Dashboard2Screen extends Component {
 
@@ -21,7 +21,7 @@ export default class Dashboard2Screen extends Component {
 
   render() {
     return (
-      <ScreenComponent
+      <ScreenWrapper
         titleHeader="Tổng quan"
         isLoading={this.state.isLoading}
         isError={this.state.isError}

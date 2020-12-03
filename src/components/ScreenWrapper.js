@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import Loading from "./Loading";
 import ScreenError from "./ScreenError";
 
-export default class ScreenComponent extends Component {
+export default class ScreenWrapper extends Component {
   // renderBody() {
   //   const { isLoading, isError, reload, children, showBackground, back, renderViewHeader } = this.props;
   //   const marginTop = showBackground
-  //     ? statusBarHeight + (Platform.OS == 'ios' ? (isIPhoneX() ? (!back || renderViewHeader ? 10 : 5) : 30) : 65)
+  //     ? statusBarHeight + (Platform.OS == 'ios' ? (isIPhoneX() ? (!back || renderViewHeader ? 10 : 5) : 30) : 65)`
   //     : 0;
   //   if (isLoading) return <Loading />;
   //   if (isError) return <Error reload={reload} />;
@@ -18,22 +18,26 @@ export default class ScreenComponent extends Component {
       titleHeader,
       isLoading,
       isError,
-      showBackground,
+      isEmpty,
       back,
-      renderViewHeader,
-      render,
+      renderHeader,
+      renderFooter,
+      children,
+      paging,
     } = this.props;
+
+    // {activePage, action, totalItemsCount, itemCountPerPage }
 
     if (isLoading)
       return (
         <div className="content-wrapper">
-          {titleHeader && (
+          {/* {titleHeader && (
             <div className="content-header">
               <div className="container-fluid">
                 <h1 className="m-0 text-dark">{titleHeader}</h1>
               </div>
             </div>
-          )}
+          )} */}
           <Loading />
         </div>
       );
@@ -56,8 +60,7 @@ export default class ScreenComponent extends Component {
             </div>
           </div>
         )}
-        {/* Body */}
-        {render}
+        {children}
       </div>
     );
   }

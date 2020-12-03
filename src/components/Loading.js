@@ -5,7 +5,7 @@ const TableLoader = props => (
   <ContentLoader
     width= "100%"
     height="100%"
-    viewBox="0 0 1000 500"
+    viewBox="0 0 1000 550"
     backgroundColor="#eaeced"
     foregroundColor="#ffffff"
     {...props}

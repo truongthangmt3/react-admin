@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import ScreenWrapper from "@components/ScreenWrapper";
+import "./style.css"
 
-class BaseScreen extends Component {
+class CustomerDetails extends Component {
   state = {
     isLoading: true,
     isError: true,
   };
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   this.setState({
-    //     isLoading: false,
-    // isError: true,
-    //   })
-    // }, 3000);
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+    isError: true,
+      })
+    }, 3000);
   }
 
   _renderBody = () => {
@@ -33,4 +34,4 @@ class BaseScreen extends Component {
   }
 }
 
-export default BaseScreen;
+export default CustomerDetails;
