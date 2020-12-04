@@ -60,7 +60,9 @@ export default class ScreenWrapper extends Component {
             </div>
           </div>
         )}
-        {children}
+        <section className="content">
+          <div class="container-fluid">{children}</div>
+        </section>
       </div>
     );
   }

@@ -12,6 +12,7 @@ import {
   BaseScreen,
   CustomerListScreen,
   CustomerDetailScreen,
+  AccountListScreen,
 } from "../screens/index";
 
 import Menu from "../components/Menu";
@@ -44,6 +45,7 @@ class MainNavigator extends Component {
           <Route path="/login" exact component={LoginScreen} />
           <Route path="/base" exact component={BaseScreen} />
           <Route path="/customer" exact component={CustomerListScreen} />
+          <Route path="/account" exact component={AccountListScreen} />
           <Route
             path="/customer-detail"
             exact

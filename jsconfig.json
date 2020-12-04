@@ -8,6 +8,7 @@
       "@constants/*": ["./src/constants/*"],
       "@assets/*": ["./src/assets/*"],
       "@action/*": ["./src/redux/actions/*"],
+      "@network/*": ["./src/network/*"],
       "@src/*": ["./src/*"],
       "@styles/*": ["./src/styles/*"],
       "@R": ["./src/res/R.js"]

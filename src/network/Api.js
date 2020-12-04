@@ -2,13 +2,14 @@ import axios from "axios";
 import Cookie from "js-cookie";
 import queryString from "query-string";
 
-const Reactotron =
-  process.env.NODE_ENV !== "production" &&
-  require("reactotron-react-js").default;
+// const Reactotron =
+//   process.env.NODE_ENV !== "production" &&
+//   require("reactotron-react-js").default;
 
 function createAxios() {
   var axiosInstant = axios.create();
   axiosInstant.defaults.baseURL = "http://utruckdev.winds.vn:8668";
+  // axiosInstant.defaults.baseURL = "http://localhost:8888";
   axiosInstant.defaults.timeout = 20000;
   axiosInstant.defaults.headers = { "Content-Type": "application/json" };
   axiosInstant.defaults.headers = { "access-control-allow-origin": "*" };
@@ -26,7 +27,7 @@ function createAxios() {
     (response) => {
       // log via ReactOtron
       if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
-        Reactotron.apisauce(response);
+        // Reactotron.apisauce(response);
       } else {
         // production code
       }
@@ -50,6 +51,7 @@ export const axiosClient = createAxios();
 /* Support function */
 function handleResult(api) {
   return api.then((res) => {
+    // alert(JSON.stringify(res.data));
     if (res.data.status !== 1) {
       if (res.data.code === 403) {
         Cookie.remove("SESSION_ID");
@@ -68,4 +70,7 @@ function handleUrl(url, query) {
 export const ApiClient = {
   get: (url, payload) => handleResult(axiosClient.get(handleUrl(url, payload))),
   post: (url, payload) => handleResult(axiosClient.post(url, payload)),
+  put: (url, payload) => handleResult(axiosClient.put(url, payload)),
+  path: (url, payload) => handleResult(axiosClient.patch(url, payload)),
+  delete: (url, payload) => handleResult(axiosClient.delete(url, payload)),
 };
