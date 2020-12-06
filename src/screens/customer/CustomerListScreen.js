@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ScreenWrapper from "@components/ScreenWrapper";
+import ScreenWrapper from "components/ScreenWrapper";
 import { connect } from "react-redux";
-import { actions, increment } from "@src/redux/reducers/customerSlice";
+import { actions, increment } from "redux/reducers/customerSlice";
 
 class CustomerListScreen extends Component {
   state = {
@@ -10,12 +10,6 @@ class CustomerListScreen extends Component {
   };
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   this.setState({
-    //     isLoading: false,
-    // isError: true,
-    //   })
-    // }, 3000);
   }
 
   _renderBody = () => {

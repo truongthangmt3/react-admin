@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { NavLink, Link, useRouteMatch } from "react-router-dom";
-import MockData from "@constants/MockData.json";
+import MockData from "constants/MockData.json";
 import MenuItem from "./MenuItem.js";
 
 class Menu extends Component {
   render() {
     return (
       <div>
-        <aside className="main-sidebar elevation-4 sidebar-light-lightblue">
+        <aside className="main-sidebar elevation-4 sidebar-dark-lightblue">
           {/* Brand Logo */}
           <a className="brand-link">
             <img
@@ -44,7 +44,17 @@ class Menu extends Component {
                 data-accordion="false"
               >
                 <MenuItem data={MockData.menus} />
+                <li class="nav-item">
+            <a href="widgets.html" class="nav-link active">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Widgets
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
                 <li className="nav-header">MISCELLANEOUS</li>
+                
                 <li className="nav-item">
                   <a href="https://adminlte.io/docs/3.0" className="nav-link">
                     <i className="nav-icon fas fa-file" />

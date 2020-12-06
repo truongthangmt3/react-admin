@@ -16,7 +16,7 @@ import {
 } from "../screens/index";
 
 import Menu from "../components/Menu";
-import Header from "@components/Header";
+import Header from "components/Header";
 import { ROUTER } from "../constants/Constant";
 import PrivateRoute from "./PrivateRoute";
 

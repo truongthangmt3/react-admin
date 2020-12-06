@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link, useRouteMatch } from "react-router-dom";
-import MockData from "@constants/MockData.json";
+import MockData from "constants/MockData.json";
 
 const menus = [
   {

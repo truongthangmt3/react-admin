@@ -1,18 +1,10 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["./src/components/*"],
-      "@screens/*": ["./src/screens/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@action/*": ["./src/redux/actions/*"],
-      "@network/*": ["./src/network/*"],
-      "@src/*": ["./src/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@R": ["./src/res/R.js"]
-    }
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "./src",
+    "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "build", "coverage", "dist", "lib"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "coverage", "dist", "lib", "public"]
 }

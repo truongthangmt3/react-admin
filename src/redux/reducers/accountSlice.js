@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import AccountApi from "@network/AccountApi";
+import AccountApi from "network/AccountApi";
 
 export const login = createAsyncThunk("account/list", async (payload) => {
   try {

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ScreenWrapper from "@components/ScreenWrapper";
+import ScreenWrapper from "components/ScreenWrapper";
 import { Table } from "react-bootstrap";
 import { connect } from "react-redux";
-import { login } from "@src/redux/reducers/accountSlice";
-import AccountApi from "@network/AccountApi";
+import { login } from "redux/reducers/accountSlice";
+import AccountApi from "network/AccountApi";
 
 class AccountListScreen extends Component {
   state = {
@@ -12,12 +12,12 @@ class AccountListScreen extends Component {
   };
 
   componentDidMount() {
-    setTimeout(() => {
+    // setTimeout(() => {
       this.props.login({
         username: "admin",
         password: "admin",
       });
-    }, 1500);
+    // }, 1500);
   }
 
   _renderBody = () => {
@@ -132,10 +132,12 @@ class AccountListScreen extends Component {
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
 
-        {/* <Table striped bordered hover>
+
+    
+          </div>
+          <div className="card-body">
+          <Table striped bordered hover>
           <thead>
             <tr>
               <th>#</th>
@@ -147,24 +149,29 @@ class AccountListScreen extends Component {
           <tbody>
             <tr>
               <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>Nguyễn Trường</td>
+              <td>Thăng</td>
+              <td>@thangnt</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <td>Nguyễn Chí</td>
+              <td>Tùng</td>
+              <td>@tungnc</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Larry the Bird</td>
-              <td>Jerry</td>
-              <td>@twitter</td>
+              <td>Nguyễn Thị Thanh</td>
+              <td>Nga</td>
+              <td>@ngantt</td>
             </tr>
           </tbody>
-        </Table> */}
+        </Table>
+
+        </div>
+        </div>
+
+        
       </>
     );
   };

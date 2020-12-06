@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ScreenWrapper from "@components/ScreenWrapper";
+import ScreenWrapper from "components/ScreenWrapper";
 
 class BaseScreen extends Component {
   state = {
