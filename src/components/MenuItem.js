@@ -20,7 +20,11 @@ class MenuItem extends Component {
               <li className="nav-item has-treeview">
                 <a href="#" className="nav-link">
                   <i className={`nav-icon ${item.icon}`} />
-                  <p>
+                  <p
+                    style={{
+                      marginLeft: "0.2rem",
+                    }}
+                  >
                     {item.name}
                     <i className="right fas fa-angle-left" />
                   </p>
@@ -35,7 +39,13 @@ class MenuItem extends Component {
                           activeClassName="active"
                         >
                           <i className={`nav-icon ${child.icon}`} />
-                          <p>{child.name}</p>
+                          <p
+                            style={{
+                              marginLeft: "0.2rem",
+                            }}
+                          >
+                            {child.name}
+                          </p>
                         </NavLink>
                       </li>
                     );
@@ -52,7 +62,13 @@ class MenuItem extends Component {
                   activeClassName="active"
                 >
                   <i className={`nav-icon ${item.icon}`} />
-                  <p>{item.name}</p>
+                  <p
+                    style={{
+                      marginLeft: "0.2rem",
+                    }}
+                  >
+                    {item.name}
+                  </p>
                   {item.badge && (
                     <span className="right badge badge-danger">
                       {item.badge}
