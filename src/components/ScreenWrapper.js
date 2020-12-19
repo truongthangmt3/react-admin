@@ -3,16 +3,6 @@ import Loading from "./Loading";
 import ScreenError from "./ScreenError";
 
 export default class ScreenWrapper extends Component {
-  // renderBody() {
-  //   const { isLoading, isError, reload, children, showBackground, back, renderViewHeader } = this.props;
-  //   const marginTop = showBackground
-  //     ? statusBarHeight + (Platform.OS == 'ios' ? (isIPhoneX() ? (!back || renderViewHeader ? 10 : 5) : 30) : 65)`
-  //     : 0;
-  //   if (isLoading) return <Loading />;
-  //   if (isError) return <Error reload={reload} />;
-  //   return <View style={{ flex: 1, marginTop: marginTop }} children={children} />;
-  // }
-
   render() {
     const {
       titleHeader,
@@ -22,7 +12,6 @@ export default class ScreenWrapper extends Component {
       back,
       renderHeader,
       renderFooter,
-      children,
       paging,
     } = this.props;
 
@@ -61,7 +50,7 @@ export default class ScreenWrapper extends Component {
           </div>
         )}
         <section className="content">
-          <div class="container-fluid">{children}</div>
+          <div class="container-fluid">{this.props.children}</div>
         </section>
       </div>
     );

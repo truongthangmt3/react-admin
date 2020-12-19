@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const increment = createAsyncThunk("counter/increment", async () => {
   return await new Promise((resolve, reject) =>
     setTimeout(() => {
-      reject({ data: Date.now() });
+      resolve({ data: Date.now() });
     }, 1000)
   );
 });

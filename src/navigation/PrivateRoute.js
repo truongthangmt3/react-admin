@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import Cookie from 'js-cookie';
-import { ROUTER } from '../constants/Constant';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import Cookie from "js-cookie";
+import { ROUTER } from "../constants/Constant";
 
 export default class PrivateRoute extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export default class PrivateRoute extends React.Component {
 
   render() {
     const { path, Component, exact } = this.props;
-    let token = Cookie.get('SESSION_ID');
+    let token = Cookie.get("SESSION_ID");
     let hasToken = token ? true : false;
     return (
       <Route

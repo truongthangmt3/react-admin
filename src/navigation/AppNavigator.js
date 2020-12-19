@@ -51,7 +51,7 @@ class MainNavigator extends Component {
             exact
             component={CustomerDetailScreen}
           />
-          <Route render={() => <Redirect to={"base-screen"} />} />
+          <Route render={() => <Redirect to={"login"} />} />
         </Switch>
       </>
     );

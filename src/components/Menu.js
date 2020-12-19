@@ -7,7 +7,7 @@ class Menu extends Component {
   render() {
     return (
       <div>
-        <aside className="main-sidebar elevation-4 sidebar-dark-lightblue">
+        <aside className="main-sidebar sidebar-light-lightblue elevation-4 me-sidebar">
           {/* Brand Logo */}
           <a className="brand-link">
             <img
@@ -37,31 +37,22 @@ class Menu extends Component {
             </div>
             {/* Sidebar Menu */}
             <nav className="mt-2">
-              <ul
+              {/* <ul
                 className="nav nav-pills nav-sidebar flex-column nav-flat"
                 data-widget="treeview"
                 role="menu"
                 data-accordion="false"
-              >
-                <MenuItem data={MockData.menus} />
-                <li class="nav-item">
-            <a href="widgets.html" class="nav-link active">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-                <li className="nav-header">MISCELLANEOUS</li>
-                
+              > */}
+              <MenuItem data={MockData.menus} />
+              {/* <li className="nav-header">MISCELLANEOUS</li>
+
                 <li className="nav-item">
                   <a href="https://adminlte.io/docs/3.0" className="nav-link">
                     <i className="nav-icon fas fa-file" />
                     <p>Documentation</p>
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </nav>
             {/* /.sidebar-menu */}
           </div>

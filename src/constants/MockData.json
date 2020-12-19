@@ -9,14 +9,14 @@
     },
     {
       "name": "Khách hàng",
-      "icon": "fas fa-users",
+      "icon": "fas fa-copy",
       "children": null,
       "path": "/customer",
       "badge": "+8"
     },
     {
       "name": "Phụ tùng",
-      "icon": "fas fa-truck-monster",
+      "icon": "fas fa-toolbox",
       "children": [
         {
           "name": "Danh sách",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Xe mới",
-      "icon": "fas fa-truck",
+      "icon": "fas fa-columns",
       "path": "/vehicle",
       "children": [
         {
@@ -54,7 +54,7 @@
     },
     {
       "name": "Vận chuyển",
-      "icon": "fas fa-shipping-fast",
+      "icon": "fas fa-dolly-flatbed",
       "path": "/vehicle",
       "children": [
         {
@@ -73,7 +73,7 @@
     },
     {
       "name": "UConnect",
-      "icon": "fas fa-link",
+      "icon": "fas fa-network-wired",
       "path": "/vehicle",
       "children": [
         {
@@ -93,7 +93,7 @@
 
     {
       "name": "Chợ xe",
-      "icon": "fas fa-store",
+      "icon": "fas fa-shopping-cart",
       "path": "/vehicle",
       "children": [
         {
@@ -112,14 +112,14 @@
     },
     {
       "name": "Cấu hình",
-      "icon": "fas fa-cogs",
+      "icon": "fas fa-sliders-h",
       "children": null,
       "path": "/config",
       "badge": null
     },
     {
       "name": "Tài khoản",
-      "icon": "fas fa-user-cog",
+      "icon": "fas fa-list-alt",
       "children": null,
       "path": "/account",
       "badge": null
